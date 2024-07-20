@@ -47,3 +47,7 @@ function getCode(callback) {
   document.body.appendChild(script);
   console.log('Script injected into page');
 }
+
+//sending message to background service worker
+chrome.runtime.sendMessage({ action: "contentScriptExecuted" });
+
